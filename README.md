@@ -17,3 +17,16 @@ Dataset is composed of online banking queries annotated with their corresponding
 
 ## Goal
 Goal of my work is to create a Neural Network that classifies the Intents, which then can be used to create a Rule Based Chatbot that handles customer requests.
+
+## Results
+
+I was able to train a Recurrent Neural Network with LSTM - Cells to classify the intents based on the user requests in the dataset.
+
+![](https://github.com/julianostermaier/banking-data-intent-detection/blob/main/accuracy-over-time.png)
+![](https://github.com/julianostermaier/banking-data-intent-detection/blob/main/confusion-matrix.png)
+
+The confusion matrix shows, that some categories are recognized with a high accuracy of more than 80 %. Still, there are some categories that our recurrent neural network is not picking up on, probably because they are hard to distinguish from each other. That's why the accuracy for some categories might be so low.
+
+![](https://github.com/julianostermaier/banking-data-intent-detection/blob/main/accuracy-other-models.png)
+
+Considering the algorithms used in the mentioned paper, with the highest test accuracy of about **94 %** (BERT model), are very complex, our simple RNN did fairly good with it's test accuracy of around **67 %**.
